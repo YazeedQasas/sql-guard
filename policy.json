@@ -1,0 +1,6 @@
+{
+  "allowed_tables": ["customers", "orders", "products"],
+  "default_database": "sqlguard_demo",
+  "max_rows": 100,
+  "extra_denied_keywords": []
+}

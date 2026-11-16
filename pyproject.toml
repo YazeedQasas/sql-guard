@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sql-guard"
+version = "0.1.0"
+description = "A guard layer for AI-generated SQL: block with machine-readable reasons, or return a safe, row-capped SELECT."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["sqlglot>=25", "pymysql>=1.1"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+sql-guard = "sql_guard.cli:main"
+
+[tool.setuptools]
+packages = ["sql_guard"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
